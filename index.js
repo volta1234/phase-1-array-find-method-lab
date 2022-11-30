@@ -4,8 +4,8 @@ const record = [
      { year: "2013", result: "L"},
    ]
 
-superbowlWin = (record) => {
+const superbowlWin = (record) => {
     const result = record.find(record => record.result === "W");
-    return !! result ? result.year : undefined;
+    return Boolean(result) ? result.year : undefined;
 }
-console.log(record)
+console.log(superbowlWin(record));
